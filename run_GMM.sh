@@ -1,18 +1,20 @@
 #!/bin/sh -e
 
-nIters=1
+nIters=1	# Set to one for development. You need at least 10 for convergency
 nMix=256
 
 # Run jobs on Hadoop cluster
 # Run this script on enmcomp7 (the host that run ResourceManager)
 
+# Split the training data into a number of text files
+cd $HADOOP_PREFIX/Workspace/MapReduce/matlab
+mkdir -p input
+./split_file.pl input_data.txt 16
+
+
 # Init the GMM by calling the sequential version with 0 iteration (i.e., without EM step)
 cd $HADOOP_PREFIX/Workspace/MapReduce/bin
 java sequential.gmm.GMM 60 $nMix 0 ../matlab/input_data.txt ../matlab/gmm.txt
-
-# Split the training data into a number of text files
-cd $HADOOP_PREFIX/Workspace/MapReduce/matlab
-./split_file.pl input_data.txt 16
 
 # Compress the Map and Reduce classes into a jar file. This jar file is needed by bin/hadoop
 cd $HADOOP_PREFIX/Workspace/MapReduce
