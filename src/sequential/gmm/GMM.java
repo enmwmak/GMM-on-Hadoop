@@ -3,7 +3,7 @@
  * Example usage:
  * 		cd <Workspace>/MapReduce/bin
  * 		java sequential.gmm.GMM <dimension> <No. of mixtures> <No. of iters> <data file> [output file]
- * 		java sequential.gmm.GMM 60 32 20 ../matlab/2D_data.txt ../matlab/gmm.txt
+ * 		java sequential.gmm.GMM 60 256 10 ../matlab/input_data.txt ../matlab/gmm.txt
  * 
  * Author: Man-Wai MAK, Dept. of EIE, The Hong Kong Polytechnic University
  * Version: 1.0
