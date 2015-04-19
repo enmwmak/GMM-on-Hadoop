@@ -6,7 +6,8 @@
 # Define the MapReduce class that contains the Map and Reduce tasks
 #MRclass=MapRedSalesStats
 #MRclass=MapRedMeanSales
-MRclass=MapRedTotalSales
+#MRclass=MapRedTotalSales
+MRclass=MapRedMaxSales
 
 # Split the training data into a number of text files
 cd $HADOOP_PREFIX/Workspace/MapReduce/matlab
