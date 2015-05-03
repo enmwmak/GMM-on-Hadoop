@@ -21,9 +21,14 @@ http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-par
 
 http://readwrite.com/2013/10/02/github-for-beginners-part-2
 
-Steps for Github
+----------------------
+Steps for downloading the repo
 
+cd ~
+git clone https://github.com/enmwmak/GMM-on-Hadoop.git
 
+----------------------
+Steps for Create a new repo on Github
 
 cd ~/so/java/hadoop/Workspace/MapReduce
 
@@ -40,6 +45,3 @@ git commit -m "first commit"
 git remote add origin https://github.com/enmwmak/GMM-on-Hadoop.git
 
 git push -u origin master
-
-
-
