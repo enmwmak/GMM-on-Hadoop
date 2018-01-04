@@ -21,7 +21,7 @@ my $numfiles = $ARGV[1];
 
 my ($basename,$path,$ext) = fileparse($infile,qr/\.[^.]*/);
 
-$numlines = `/usr/local/bin/numlines $infile`; chomp $numlines;
+$numlines = `./numlines $infile`; chomp $numlines;
 $cutpoint = ceil($numlines/$numfiles);
 
 `rm -f input/*`;
